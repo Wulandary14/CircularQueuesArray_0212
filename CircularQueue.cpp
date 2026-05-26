@@ -26,7 +26,7 @@ public :
         if ((FRONT == 0 && REAR == max - 1) || (FRONT == REAR + 1))
         {
             cout << "\nQueue overflow\n";
-            return
+            return;
         }
 
         //cek apakah antrian kosong
@@ -44,6 +44,16 @@ public :
                 REAR = REAR +1;
         }
         queue_array[REAR] = num;
+    }
+
+    void remove()
+    {
+        //cek apakah antrian kosong
+        if (FRONT == -1)
+        {
+            cout << "Queue underflow\n";
+            return;
+        }
     }
 
 }
